@@ -1,0 +1,11 @@
+build/
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
+*.exe
+*.out
+.vscode/
+.vs/
+.cache/
+.clangd/
+test_dict*/
