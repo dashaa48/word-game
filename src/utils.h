@@ -1,6 +1,6 @@
 /**
  * @file utils.h
- * @brief Utility functions for string operations
+ * @brief Вспомогательные функции для работы со строками
  */
 
 #ifndef UTILS_H
@@ -9,38 +9,38 @@
 #include <string>
 
 /**
- * @brief Converts string to lowercase
- * @param str Input string
- * @return Lowercase string
+ * @brief Преобразуем строку в нижний регистр
+ * @param str Входная строка
+ * @return Строка в нижнем регистре
  */
 std::string toLower(const std::string& str);
 
 /**
- * @brief Checks if string contains only letters
- * @param str Input string
- * @return true if valid word
+ * @brief Проверяет, содержит ли строка только буквы
+ * @param str Входная строка
+ * @return true, если слово корректно
  */
 bool isValidWord(const std::string& str);
 
 /**
- * @brief Gets last significant letter of a word
- * @param word Input word
- * @return Last letter character
+ * @brief Возвращает последнюю значимую букву слова
+ * @param word Входное слово
+ * @return Последняя буква
  */
 char getLastLetter(const std::string& word);
 
 /**
- * @brief Gets second last significant letter of a word
- * @param word Input word
- * @return Second last letter character, or '\0' if not enough letters
+ * @brief Возвращает предпоследнюю значимую букву слова
+ * @param word Входное слово
+ * @return Предпоследняя буква или '\0', если букв недостаточно
  */
 char getSecondLastLetter(const std::string& word);
 
 /**
- * @brief Gets previous letter in alphabet
- * @param c Current letter
- * @return Previous letter, or same if 'a'
+ * @brief Возвращает предыдущую букву алфавита
+ * @param c Текущая буква
+ * @return Предыдущая буква или та же, если это 'a'
  */
 char getPreviousLetter(char c);
 
-#endif  // UTILS_H
+#endif 

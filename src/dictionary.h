@@ -1,6 +1,6 @@
 /**
  * @file dictionary.h
- * @brief Dictionary class for word storage
+ * @brief Класс словаря, для хранения слов
  */
 
 #ifndef DICTIONARY_H
@@ -12,44 +12,44 @@
 
 /**
  * @class Dictionary
- * @brief Loads and stores words from text files
+ * @brief Загружает и хранит слова из текстовых файлов
  */
 class Dictionary {
    public:
     /**
-     * @brief Constructor
-     * @param dictionaryPath Path to dictionary folder
+     * @brief Конструктор
+     * @param dictionaryPath Путь к папке словаря
      */
     explicit Dictionary(const std::string& dictionaryPath);
 
     /**
-     * @brief Checks if word exists in dictionary (case-insensitive)
-     * @param word Word to check (any case, e.g. "Apple" or "APPLE")
-     * @return true if word exists in dictionary files
+     * @brief Проверяет, есть ли слово в словаре (без учета регистра)
+     * @param word Слово для проверки (любой регистр: "APPLE", "apple")
+     * @return true если слово есть в файлах словаря
      */
     bool contains(const std::string& word) const;
 
     /**
-     * @brief Gets random word starting with given letter
-     * @param letter Starting letter
-     * @return Word or empty string if none
+     * @brief Получение случайного слово, начинающееся с заданной буквы
+     * @param letter Начальная буква
+     * @return Слово или пустая строка, если таких нет
      */
     std::string getRandomWord(char letter) const;
 
     /**
-     * @brief Gets random unused word starting with given letter
-     * @param letter Starting letter
-     * @param usedWords Already used words
-     * @return Unused word or empty string if none
+     * @brief Получаем случайное неиспользованное слово, начинающееся с заданной буквы
+     * @param letter Начальная буква
+     * @param usedWords Уже использованные слова
+     * @return Неиспользованное слово или пустая строка, если таких нет
      */
     std::string getRandomUnusedWord(char letter,
                                     const std::unordered_set<std::string>& usedWords) const;
 
     /**
-     * @brief Checks if there are unused words for a letter
-     * @param letter Letter to check
-     * @param usedWords Set of already used words
-     * @return true if available words exist
+     * @brief Проверяет наличие неиспользованных слов для заданной буквы
+     * @param letter Буква для проверки
+     * @param usedWords Набор уже использованных слов
+     * @return true, если есть доступные слова
      */
     bool hasAvailableWords(char letter, const std::unordered_set<std::string>& usedWords) const;
 
@@ -58,10 +58,10 @@ class Dictionary {
 
     std::string path_;
     std::unordered_set<std::string> allWords_;
-    std::vector<std::string> wordsByLetter_[ALPHABET_SIZE];  // a-z
+    std::vector<std::string> wordsByLetter_[ALPHABET_SIZE];  
 
     static int letterToIndex(char c);
     void loadLetterFile(char letter);
 };
 
-#endif  // DICTIONARY_H
+#endif  

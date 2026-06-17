@@ -56,7 +56,6 @@ void Game::run() {
             lastWord_ = word;
             currentLetter_ = getLastLetter(word);
 
-            // Rule 5: search fallback letter inside previous word
             if (!dictionary_.hasAvailableWords(currentLetter_, usedWords_)) {
                 std::string lower = toLower(lastWord_);
 

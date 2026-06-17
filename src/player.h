@@ -1,6 +1,6 @@
 /**
  * @file player.h
- * @brief Player classes (human and computer)
+ * @brief Классы игроков (человек и ПК)
  */
 
 #ifndef PLAYER_H
@@ -13,38 +13,38 @@
 
 /**
  * @class Player
- * @brief Abstract base class for players
+ * @brief Абстрактный базовый класс для игроков
  */
 class Player {
    public:
     virtual ~Player() = default;
 
     /**
-     * @brief Makes a move
-     * @param requiredLetter Required starting letter
-     * @param dictionary Dictionary
-     * @param usedWords Set of used words
-     * @return Played word or empty string
+     * @brief Делает ход
+     * @param requiredLetter Требуемая начальная буква
+     * @param dictionary Словарь
+     * @param usedWords Набор использованных слов
+     * @return Сыгранное слово или пустая строка
      */
     virtual std::string makeMove(char requiredLetter, const Dictionary& dictionary,
                                  const std::unordered_set<std::string>& usedWords) = 0;
 
     /**
-     * @brief Gets player name
-     * @return Name
+     * @brief Возвращает имя игрока
+     * @return Имя
      */
     virtual std::string getName() const = 0;
 };
 
 /**
  * @class HumanPlayer
- * @brief Human player (keyboard input)
+ * @brief Игрок-человек (ввод с клавиатуры)
  */
 class HumanPlayer : public Player {
    public:
     /**
-     * @brief Constructor
-     * @param name Player name
+     * @brief Конструктор
+     * @param name Имя игрока
      */
     explicit HumanPlayer(std::string name);
 
@@ -59,13 +59,13 @@ class HumanPlayer : public Player {
 
 /**
  * @class ComputerPlayer
- * @brief Computer player (random word selection)
+ * @brief Игрок-ПК (случайный выбор слова)
  */
 class ComputerPlayer : public Player {
    public:
     /**
-     * @brief Constructor
-     * @param name Player name (default "PC")
+     * @brief Конструктор
+     * @param name Имя игрока ("PC")
      */
     explicit ComputerPlayer(std::string name = "PC");
 
@@ -78,4 +78,4 @@ class ComputerPlayer : public Player {
     std::string name_;
 };
 
-#endif  // PLAYER_H
+#endif 

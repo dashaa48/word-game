@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * @brief Entry point
+ * @brief Точка входа
  */
 
 #include <filesystem>
@@ -14,15 +14,15 @@
 #endif
 
 /**
- * @brief Gets directory of executable file
- * @return Path to directory with .exe
+ * @brief Определяет папку, в которой находится исполняемый файл
+ * @return Путь к директорию с программой или "." в случае ошибки
  */
 std::string getExeDirectory() {
 #ifdef _WIN32
     char buffer[MAX_PATH];
     GetModuleFileNameA(nullptr, buffer, MAX_PATH);
     std::string path(buffer);
-    // Remove filename, keep directory
+    // Убираем имя файла, оставляем только папку
     size_t lastSlash = path.find_last_of("\\/");
     if (lastSlash != std::string::npos) {
         return path.substr(0, lastSlash);
@@ -34,31 +34,31 @@ std::string getExeDirectory() {
 }
 
 /**
- * @brief Finds dictionary folder automatically
- * @return Path to dictionary
+ * @brief Автоматически находит папку со словарём
+ * @return Путь к папке словаря
  */
 std::string findDictionary() {
     std::string exeDir = getExeDirectory();
 
-    // Try: same folder as exe
+    // Пробуем: та же папка, что и .exe
     std::string sameFolder = exeDir + "/dictionary";
     if (std::filesystem::exists(sameFolder)) {
         return sameFolder;
     }
 
-    // Try: parent folder (when exe is in build/)
+    // Ищем в родительской папке (если .exe в build/)
     std::string parentFolder = exeDir + "/../dictionary";
     if (std::filesystem::exists(parentFolder)) {
         return parentFolder;
     }
 
-    // Default fallback
+    // Вариант по умолчанию
     return "dictionary";
 }
 
 /**
- * @brief Shows mode selection menu
- * @return Selected mode
+ * @brief Показывает меню выбора режима игры
+ * @return Выбранный режим
  */
 #include <limits>
 
@@ -95,8 +95,8 @@ GameMode selectMode() {
 }
 
 /**
- * @brief Asks for dictionary path (with auto-detect)
- * @return Path to dictionary folder
+ * @brief Запрашивает путь к словарю (с автоопределением)
+ * @return Путь к папке словаря
  */
 std::string getDictionaryPath() {
     std::string autoPath = findDictionary();

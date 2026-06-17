@@ -1,6 +1,6 @@
 /**
  * @file game.h
- * @brief Main game logic
+ * @brief Основная логика игры
  */
 
 #ifndef GAME_H
@@ -15,41 +15,41 @@
 
 /**
  * @enum GameMode
- * @brief Game modes
+ * @brief Режимы игры
  */
 enum class GameMode {
-    HUMAN_VS_PC,      ///< Human vs computer
-    TWO_HUMANS,       ///< Two humans
-    TWO_HUMANS_VS_PC  ///< Two humans vs computer (alternating)
+    HUMAN_VS_PC,      ///< Человек против ПК
+    TWO_HUMANS,       ///< Два человека
+    TWO_HUMANS_VS_PC  ///< Два человека против ПК (по очереди)
 };
 
 /**
  * @class Game
- * @brief Manages game flow
+ * @brief Управляет процессом игры
  */
 class Game {
    public:
     /**
-     * @brief Constructor
-     * @param mode Game mode (HUMAN_VS_PC, TWO_HUMANS, TWO_HUMANS_VS_PC)
-     * @param dictionaryPath Path to folder containing dictionary files (a.txt, b.txt, etc)
+     * @brief Конструктор
+     * @param mode Режим игры (HUMAN_VS_PC, TWO_HUMANS, TWO_HUMANS_VS_PC)
+     * @param dictionaryPath Путь к папке с файлами словаря (a.txt, b.txt, etc)
      */
     Game(GameMode mode, const std::string& dictionaryPath);
 
     /**
-     * @brief Runs game loop
+     * @brief Запускает игровой цикл
      */
     void run();
 
     /**
-     * @brief Returns last played word
-     * @return Last word
+     * @brief Возвращает последнее сыгранное слово
+     * @return Последнее слово
      */
     std::string getLastWord() const;
 
     /**
-     * @brief Returns current required letter
-     * @return Letter
+     * @brief Возвращает текущую требуемую букву
+     * @return Буква
      */
     char getCurrentLetter() const;
 
@@ -67,4 +67,4 @@ class Game {
     bool hasAvailableMoves() const;
 };
 
-#endif  // GAME_H
+#endif 
