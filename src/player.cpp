@@ -48,20 +48,13 @@ std::string ComputerPlayer::makeMove(char requiredLetter, const Dictionary& dict
                                      const std::unordered_set<std::string>& usedWords) {
     std::string word = dictionary.getRandomUnusedWord(requiredLetter, usedWords);
 
-    if (word.empty() || usedWords.find(word) != usedWords.end()) {
-        for (char c = getPreviousLetter(requiredLetter); c >= 'a' && c != requiredLetter;
-             c = getPreviousLetter(c)) {
-            if (!dictionary.hasAvailableWords(c, usedWords)) continue;
-            std::string candidate = dictionary.getRandomUnusedWord(c, usedWords);
-            if (!candidate.empty() && usedWords.find(candidate) == usedWords.end()) {
-                return candidate;
-            }
-        }
-        return "";
+    if (!word.empty() && usedWords.find(word) == usedWords.end()) {
+        return word;
     }
-
-    return word;
+    return "";
 }
+
+  
 
 std::string ComputerPlayer::getName() const {
     return name_;
