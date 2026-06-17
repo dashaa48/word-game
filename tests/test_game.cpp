@@ -33,12 +33,6 @@ TEST_CASE("getSecondLastLetter returns second last character") {
     CHECK(getSecondLastLetter("ab") == 'a');
 }
 
-TEST_CASE("getPreviousLetter returns previous letter in alphabet") {
-    CHECK(getPreviousLetter('b') == 'a');
-    CHECK(getPreviousLetter('a') == 'a');
-    CHECK(getPreviousLetter('z') == 'y');
-}
-
 // ===== Dictionary tests =====
 
 TEST_CASE("Dictionary loads words from files") {

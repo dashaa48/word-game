@@ -7,8 +7,7 @@ var searchData=
   ['getlastletter_4',['getLastLetter',['../utils_8cpp.html#a4021d92ab732f0296a59143eaaf8ff95',1,'getLastLetter(const std::string &amp;word):&#160;utils.cpp'],['../utils_8h.html#a4021d92ab732f0296a59143eaaf8ff95',1,'getLastLetter(const std::string &amp;word):&#160;utils.cpp']]],
   ['getlastword_5',['getLastWord',['../class_game.html#aee6b5ef049ab98b42c38d471403eb4ed',1,'Game']]],
   ['getname_6',['getName',['../class_player.html#aaf4d4733dc40b79f21c819ae5cdcdaad',1,'Player::getName()'],['../class_human_player.html#a5b059702778c6c685438958faa22ad65',1,'HumanPlayer::getName()'],['../class_computer_player.html#aabbdf7212c23d3f092e8bc2860727e90',1,'ComputerPlayer::getName()']]],
-  ['getpreviousletter_7',['getPreviousLetter',['../utils_8cpp.html#abbd90e467e427d59d18a5571e5e543aa',1,'getPreviousLetter(char c):&#160;utils.cpp'],['../utils_8h.html#abbd90e467e427d59d18a5571e5e543aa',1,'getPreviousLetter(char c):&#160;utils.cpp']]],
-  ['getrandomunusedword_8',['getRandomUnusedWord',['../class_dictionary.html#a06df97ad2e015916ddd85711782d1758',1,'Dictionary']]],
-  ['getrandomword_9',['getRandomWord',['../class_dictionary.html#a316211c7f4bc6e302c73ec3668384829',1,'Dictionary']]],
-  ['getsecondlastletter_10',['getSecondLastLetter',['../utils_8cpp.html#a79d52e8443617b60763d5c7a1d6f0df6',1,'getSecondLastLetter(const std::string &amp;word):&#160;utils.cpp'],['../utils_8h.html#a79d52e8443617b60763d5c7a1d6f0df6',1,'getSecondLastLetter(const std::string &amp;word):&#160;utils.cpp']]]
+  ['getrandomunusedword_7',['getRandomUnusedWord',['../class_dictionary.html#a06df97ad2e015916ddd85711782d1758',1,'Dictionary']]],
+  ['getrandomword_8',['getRandomWord',['../class_dictionary.html#a316211c7f4bc6e302c73ec3668384829',1,'Dictionary']]],
+  ['getsecondlastletter_9',['getSecondLastLetter',['../utils_8cpp.html#a79d52e8443617b60763d5c7a1d6f0df6',1,'getSecondLastLetter(const std::string &amp;word):&#160;utils.cpp'],['../utils_8h.html#a79d52e8443617b60763d5c7a1d6f0df6',1,'getSecondLastLetter(const std::string &amp;word):&#160;utils.cpp']]]
 ];

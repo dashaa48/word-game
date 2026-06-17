@@ -28,8 +28,3 @@ char getSecondLastLetter(const std::string& word) {
     if (lower.size() < 2) return lower.empty() ? '\0' : lower[0];
     return lower[lower.size() - 2];
 }
-
-char getPreviousLetter(char c) {
-    if (c <= 'a') return c;
-    return c - 1;
-}

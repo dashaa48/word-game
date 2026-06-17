@@ -42,12 +42,6 @@ var menudata={children:[
 {text:"m",url:"globals.html#index_m"},
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"}]},
-{text:"Функции",url:"globals_func.html",children:[
-{text:"f",url:"globals_func.html#index_f"},
-{text:"g",url:"globals_func.html#index_g"},
-{text:"i",url:"globals_func.html#index_i"},
-{text:"m",url:"globals_func.html#index_m"},
-{text:"s",url:"globals_func.html#index_s"},
-{text:"t",url:"globals_func.html#index_t"}]},
+{text:"Функции",url:"globals_func.html"},
 {text:"Перечисления",url:"globals_enum.html"},
 {text:"Макросы",url:"globals_defs.html"}]}]}]}

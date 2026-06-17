@@ -36,11 +36,4 @@ char getLastLetter(const std::string& word);
  */
 char getSecondLastLetter(const std::string& word);
 
-/**
- * @brief Возвращает предыдущую букву алфавита
- * @param c Текущая буква
- * @return Предыдущая буква или та же, если это 'a'
- */
-char getPreviousLetter(char c);
-
 #endif 
