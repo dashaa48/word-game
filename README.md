@@ -30,15 +30,15 @@
 
 ## Структура проекта
 
-- `src/main.cpp` — точка входа, меню;
-- `src/game.cpp` — игровой цикл;
-- `src/player.cpp` — классы игроков;
-- `src/dictionary.cpp` — загрузка и поиск слов;
-- `src/utils.cpp` — вспомогательные функции;
-- `tests/test_game.cpp` — модульные тесты (doctest);
-- `docs/` — сгенерированная Doxygen-документация;
-- `CMakeLists.txt` — конфигурация сборки;
-- `.clang-format` — настройки форматирования кода.
+- `src/main.cpp` - точка входа, меню;
+- `src/game.cpp` - игровой цикл;
+- `src/player.cpp` - классы игроков;
+- `src/dictionary.cpp` - загрузка и поиск слов;
+- `src/utils.cpp` - вспомогательные функции;
+- `tests/test_game.cpp` - модульные тесты (doctest);
+- `docs/` - сгенерированная Doxygen-документация;
+- `CMakeLists.txt` - конфигурация сборки;
+- `.clang-format` - настройки форматирования кода.
 
 ## Как собрать и запустить
 
