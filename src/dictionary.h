@@ -58,10 +58,10 @@ class Dictionary {
 
     std::string path_;
     std::unordered_set<std::string> allWords_;
-    std::vector<std::string> wordsByLetter_[ALPHABET_SIZE];  
+    std::vector<std::string> wordsByLetter_[ALPHABET_SIZE];
 
     static int letterToIndex(char c);
     void loadLetterFile(char letter);
 };
 
-#endif  
+#endif

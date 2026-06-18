@@ -36,4 +36,4 @@ char getLastLetter(const std::string& word);
  */
 char getSecondLastLetter(const std::string& word);
 
-#endif 
+#endif

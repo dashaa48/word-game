@@ -54,8 +54,6 @@ std::string ComputerPlayer::makeMove(char requiredLetter, const Dictionary& dict
     return "";
 }
 
-  
-
 std::string ComputerPlayer::getName() const {
     return name_;
 }

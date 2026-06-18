@@ -92,16 +92,16 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Tests for the game (doctest).  
+<p>Тесты игры  
 <a href="#details">Подробнее...</a></p>
 <div class="textblock"><code>#include &lt;doctest/doctest.h&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &quot;<a class="el" href="dictionary_8h_source.html">dictionary.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
-<code>#include &lt;filesystem&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Макросы</h2></td></tr>
@@ -109,25 +109,25 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:ac470745e2fa6beeb9a9da4ae420c769c" id="r_ac470745e2fa6beeb9a9da4ae420c769c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac470745e2fa6beeb9a9da4ae420c769c">TEST_CASE</a> (&quot;toLower converts to lowercase&quot;)</td></tr>
-<tr class="memitem:a8b66bb47b45c5c597f763e6361ae453d" id="r_a8b66bb47b45c5c597f763e6361ae453d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8b66bb47b45c5c597f763e6361ae453d">TEST_CASE</a> (&quot;getLastLetter returns last character&quot;)</td></tr>
-<tr class="memitem:a0bd3c2b16e287c143a624007b087661e" id="r_a0bd3c2b16e287c143a624007b087661e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0bd3c2b16e287c143a624007b087661e">TEST_CASE</a> (&quot;getSecondLastLetter returns second last character&quot;)</td></tr>
-<tr class="memitem:a915fe0e63baf30e8fddf2f1acfcc462b" id="r_a915fe0e63baf30e8fddf2f1acfcc462b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a915fe0e63baf30e8fddf2f1acfcc462b">TEST_CASE</a> (&quot;Dictionary loads words from files&quot;)</td></tr>
-<tr class="memitem:af8310b800337e3ffd5843d43cc253529" id="r_af8310b800337e3ffd5843d43cc253529"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af8310b800337e3ffd5843d43cc253529">TEST_CASE</a> (&quot;Dictionary returns random word&quot;)</td></tr>
-<tr class="memitem:a383d15c72580766d85c0d5bd37d829b3" id="r_a383d15c72580766d85c0d5bd37d829b3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a383d15c72580766d85c0d5bd37d829b3">TEST_CASE</a> (&quot;Dictionary checks available words&quot;)</td></tr>
-<tr class="memitem:af04606b5850cfec9cad4b16804afa262" id="r_af04606b5850cfec9cad4b16804afa262"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af04606b5850cfec9cad4b16804afa262">TEST_CASE</a> (&quot;ComputerPlayer returns word from dictionary&quot;)</td></tr>
-<tr class="memitem:ad76fc8e69e780b59201d7513e3f74515" id="r_ad76fc8e69e780b59201d7513e3f74515"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad76fc8e69e780b59201d7513e3f74515">TEST_CASE</a> (&quot;Game starts with initial letter 'a'&quot;)</td></tr>
-<tr class="memitem:a517cbaac05d5a7af4011e7629b0c1e72" id="r_a517cbaac05d5a7af4011e7629b0c1e72"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a517cbaac05d5a7af4011e7629b0c1e72">TEST_CASE</a> (&quot;Dictionary does not contain unknown words&quot;)</td></tr>
-<tr class="memitem:a62ede311f35038f19a5fe34c8c411dc5" id="r_a62ede311f35038f19a5fe34c8c411dc5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a62ede311f35038f19a5fe34c8c411dc5">TEST_CASE</a> (&quot;Game handles empty dictionary gracefully&quot;)</td></tr>
-<tr class="memitem:afade56481922d04edd2334858847737b" id="r_afade56481922d04edd2334858847737b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afade56481922d04edd2334858847737b">TEST_CASE</a> (&quot;isValidWord rejects invalid and accepts valid input&quot;)</td></tr>
-<tr class="memitem:a2f1ebba9aa3751035aae548481690f73" id="r_a2f1ebba9aa3751035aae548481690f73"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2f1ebba9aa3751035aae548481690f73">TEST_CASE</a> (&quot;Dictionary handles missing letter files gracefully&quot;)</td></tr>
-<tr class="memitem:a36608b7f5c7cf23a33ec3832c0bbfd47" id="r_a36608b7f5c7cf23a33ec3832c0bbfd47"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a36608b7f5c7cf23a33ec3832c0bbfd47">TEST_CASE</a> (&quot;ComputerPlayer surrenders when all words used&quot;)</td></tr>
-<tr class="memitem:abc8998b57729c962cf7792ac35aff8d1" id="r_abc8998b57729c962cf7792ac35aff8d1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abc8998b57729c962cf7792ac35aff8d1">TEST_CASE</a> (&quot;getSecondLastLetter returns correct letter for fallback&quot;)</td></tr>
-<tr class="memitem:abfd8f7cc1a31fa63d3715cc141f89720" id="r_abfd8f7cc1a31fa63d3715cc141f89720"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abfd8f7cc1a31fa63d3715cc141f89720">TEST_CASE</a> (&quot;Game starts with letter 'a' even with empty dictionary&quot;)</td></tr>
-<tr class="memitem:a9af850f2f5ae7bccb602eb564c42f96c" id="r_a9af850f2f5ae7bccb602eb564c42f96c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9af850f2f5ae7bccb602eb564c42f96c">TEST_CASE</a> (&quot;HumanPlayer throws exception on invalid word&quot;)</td></tr>
+<tr class="memitem:a20c50314ff935e8c91f56df8fb18683d" id="r_a20c50314ff935e8c91f56df8fb18683d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a20c50314ff935e8c91f56df8fb18683d">TEST_CASE</a> (&quot;toLower - перевод в нижний регистр&quot;)</td></tr>
+<tr class="memitem:aa36cc9acbb70daaca061be76c7d2e233" id="r_aa36cc9acbb70daaca061be76c7d2e233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa36cc9acbb70daaca061be76c7d2e233">TEST_CASE</a> (&quot;getLastLetter - возвращение последнего символа&quot;)</td></tr>
+<tr class="memitem:aedcf5c85f3bfa1cf59cc8c6b162ebd30" id="r_aedcf5c85f3bfa1cf59cc8c6b162ebd30"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aedcf5c85f3bfa1cf59cc8c6b162ebd30">TEST_CASE</a> (&quot;getSecondLastLetter - возвращение предпоследнего символа&quot;)</td></tr>
+<tr class="memitem:ac5d884072f42a81515a18ec563f81ce7" id="r_ac5d884072f42a81515a18ec563f81ce7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac5d884072f42a81515a18ec563f81ce7">TEST_CASE</a> (&quot;Dictionary - загрузка слов из файлов&quot;)</td></tr>
+<tr class="memitem:a8d3c202672a0828f97712070afd2bf3d" id="r_a8d3c202672a0828f97712070afd2bf3d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8d3c202672a0828f97712070afd2bf3d">TEST_CASE</a> (&quot;Dictionary - возвращение случайного слова&quot;)</td></tr>
+<tr class="memitem:a02e13d30587c752d8bbeccb1956d05bc" id="r_a02e13d30587c752d8bbeccb1956d05bc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a02e13d30587c752d8bbeccb1956d05bc">TEST_CASE</a> (&quot;Dictionary - проверка доступных слов&quot;)</td></tr>
+<tr class="memitem:a084cd826e0bd4196716a337818bdc651" id="r_a084cd826e0bd4196716a337818bdc651"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a084cd826e0bd4196716a337818bdc651">TEST_CASE</a> (&quot;ComputerPlayer - возвращение слова из словаря&quot;)</td></tr>
+<tr class="memitem:ac3c662e8c1ac4e829de19f51f4d7851c" id="r_ac3c662e8c1ac4e829de19f51f4d7851c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac3c662e8c1ac4e829de19f51f4d7851c">TEST_CASE</a> (&quot;Game - первоначальная буква 'a'&quot;)</td></tr>
+<tr class="memitem:a924a80a0afd1a35b6d600648e5ed406b" id="r_a924a80a0afd1a35b6d600648e5ed406b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a924a80a0afd1a35b6d600648e5ed406b">TEST_CASE</a> (&quot;Dictionary - содержит определенные слова&quot;)</td></tr>
+<tr class="memitem:a4eeb622f5d76efc0c5b441d68a6a6163" id="r_a4eeb622f5d76efc0c5b441d68a6a6163"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4eeb622f5d76efc0c5b441d68a6a6163">TEST_CASE</a> (&quot;Game - корректно обрабатывает пустой словарь&quot;)</td></tr>
+<tr class="memitem:a86759c8e842e57431e9b8390cd65da4f" id="r_a86759c8e842e57431e9b8390cd65da4f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a86759c8e842e57431e9b8390cd65da4f">TEST_CASE</a> (&quot;isValidWord - принимает только корректный ввод и отклоняет некорректный&quot;)</td></tr>
+<tr class="memitem:a0c2bf13d2e0817197b8ce7febbf6971c" id="r_a0c2bf13d2e0817197b8ce7febbf6971c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0c2bf13d2e0817197b8ce7febbf6971c">TEST_CASE</a> (&quot;Dictionary - корректно обрабатывает отсутствие файлов для букв&quot;)</td></tr>
+<tr class="memitem:a3208f92faccc568a96ade64cb0748cd1" id="r_a3208f92faccc568a96ade64cb0748cd1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3208f92faccc568a96ade64cb0748cd1">TEST_CASE</a> (&quot;ComputerPlayer - действия, когда все слова использованы&quot;)</td></tr>
+<tr class="memitem:ade1dc577997c93f31207361f6f050fe3" id="r_ade1dc577997c93f31207361f6f050fe3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ade1dc577997c93f31207361f6f050fe3">TEST_CASE</a> (&quot;getSecondLastLetter - возвращает правильную букву для fallback&quot;)</td></tr>
+<tr class="memitem:a56aeba4d04ecc90964cce994913a59eb" id="r_a56aeba4d04ecc90964cce994913a59eb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a56aeba4d04ecc90964cce994913a59eb">TEST_CASE</a> (&quot;Game - первоначальная буква 'a' даже при пустом словаре&quot;)</td></tr>
+<tr class="memitem:a0f20ad5baad5fbbb84e6649c8530bf4f" id="r_a0f20ad5baad5fbbb84e6649c8530bf4f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0f20ad5baad5fbbb84e6649c8530bf4f">TEST_CASE</a> (&quot;HumanPlayer - выбрасывает исключение при некорректном слове&quot;)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Tests for the game (doctest). </p>
+<div class="textblock"><p>Тесты игры </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
 <a id="a623b8690a262536536a43eab2d7df03d" name="a623b8690a262536536a43eab2d7df03d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a623b8690a262536536a43eab2d7df03d">&#9670;&#160;</a></span>DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</h2>
@@ -144,8 +144,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
-<a id="af04606b5850cfec9cad4b16804afa262" name="af04606b5850cfec9cad4b16804afa262"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af04606b5850cfec9cad4b16804afa262">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/16]</span></h2>
+<a id="a084cd826e0bd4196716a337818bdc651" name="a084cd826e0bd4196716a337818bdc651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a084cd826e0bd4196716a337818bdc651">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +153,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;ComputerPlayer returns word from dictionary&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;ComputerPlayer - возвращение слова из словаря&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -161,8 +161,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a36608b7f5c7cf23a33ec3832c0bbfd47" name="a36608b7f5c7cf23a33ec3832c0bbfd47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36608b7f5c7cf23a33ec3832c0bbfd47">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/16]</span></h2>
+<a id="a3208f92faccc568a96ade64cb0748cd1" name="a3208f92faccc568a96ade64cb0748cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3208f92faccc568a96ade64cb0748cd1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +170,28 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;ComputerPlayer surrenders when all words used&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;ComputerPlayer -</td>          <td class="paramname"><span class="paramname"><em>действия</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">когда все слова использованы&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d3c202672a0828f97712070afd2bf3d" name="a8d3c202672a0828f97712070afd2bf3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3c202672a0828f97712070afd2bf3d">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Dictionary - возвращение случайного слова&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -178,8 +199,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a383d15c72580766d85c0d5bd37d829b3" name="a383d15c72580766d85c0d5bd37d829b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a383d15c72580766d85c0d5bd37d829b3">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/16]</span></h2>
+<a id="ac5d884072f42a81515a18ec563f81ce7" name="ac5d884072f42a81515a18ec563f81ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d884072f42a81515a18ec563f81ce7">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +208,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;Dictionary checks available words&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;Dictionary - загрузка слов из файлов&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -195,8 +216,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a517cbaac05d5a7af4011e7629b0c1e72" name="a517cbaac05d5a7af4011e7629b0c1e72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a517cbaac05d5a7af4011e7629b0c1e72">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/16]</span></h2>
+<a id="a0c2bf13d2e0817197b8ce7febbf6971c" name="a0c2bf13d2e0817197b8ce7febbf6971c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2bf13d2e0817197b8ce7febbf6971c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +225,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;Dictionary does not contain unknown words&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;Dictionary - корректно обрабатывает отсутствие файлов для букв&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -212,8 +233,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a2f1ebba9aa3751035aae548481690f73" name="a2f1ebba9aa3751035aae548481690f73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f1ebba9aa3751035aae548481690f73">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/16]</span></h2>
+<a id="a02e13d30587c752d8bbeccb1956d05bc" name="a02e13d30587c752d8bbeccb1956d05bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e13d30587c752d8bbeccb1956d05bc">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +242,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;Dictionary handles missing letter files gracefully&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;Dictionary - проверка доступных слов&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -229,8 +250,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a915fe0e63baf30e8fddf2f1acfcc462b" name="a915fe0e63baf30e8fddf2f1acfcc462b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a915fe0e63baf30e8fddf2f1acfcc462b">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/16]</span></h2>
+<a id="a924a80a0afd1a35b6d600648e5ed406b" name="a924a80a0afd1a35b6d600648e5ed406b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924a80a0afd1a35b6d600648e5ed406b">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,7 +259,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;Dictionary loads words from files&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;Dictionary - содержит определенные слова&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -246,8 +267,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="af8310b800337e3ffd5843d43cc253529" name="af8310b800337e3ffd5843d43cc253529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8310b800337e3ffd5843d43cc253529">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/16]</span></h2>
+<a id="a4eeb622f5d76efc0c5b441d68a6a6163" name="a4eeb622f5d76efc0c5b441d68a6a6163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eeb622f5d76efc0c5b441d68a6a6163">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,7 +276,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;Dictionary returns random word&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;Game - корректно обрабатывает пустой словарь&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -263,8 +284,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a62ede311f35038f19a5fe34c8c411dc5" name="a62ede311f35038f19a5fe34c8c411dc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62ede311f35038f19a5fe34c8c411dc5">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/16]</span></h2>
+<a id="a56aeba4d04ecc90964cce994913a59eb" name="a56aeba4d04ecc90964cce994913a59eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56aeba4d04ecc90964cce994913a59eb">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +293,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;Game handles empty dictionary gracefully&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;Game - первоначальная буква 'a' даже при пустом словаре&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -280,8 +301,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="ad76fc8e69e780b59201d7513e3f74515" name="ad76fc8e69e780b59201d7513e3f74515"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad76fc8e69e780b59201d7513e3f74515">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/16]</span></h2>
+<a id="ac3c662e8c1ac4e829de19f51f4d7851c" name="ac3c662e8c1ac4e829de19f51f4d7851c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c662e8c1ac4e829de19f51f4d7851c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,7 +310,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;Game starts with initial letter 'a'&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;Game - первоначальная буква 'a'&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -297,8 +318,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="abfd8f7cc1a31fa63d3715cc141f89720" name="abfd8f7cc1a31fa63d3715cc141f89720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfd8f7cc1a31fa63d3715cc141f89720">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/16]</span></h2>
+<a id="aa36cc9acbb70daaca061be76c7d2e233" name="aa36cc9acbb70daaca061be76c7d2e233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36cc9acbb70daaca061be76c7d2e233">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[11/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,7 +327,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;Game starts with letter 'a' even with empty dictionary&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;getLastLetter - возвращение последнего символа&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -314,8 +335,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a8b66bb47b45c5c597f763e6361ae453d" name="a8b66bb47b45c5c597f763e6361ae453d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b66bb47b45c5c597f763e6361ae453d">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[11/16]</span></h2>
+<a id="ade1dc577997c93f31207361f6f050fe3" name="ade1dc577997c93f31207361f6f050fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1dc577997c93f31207361f6f050fe3">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[12/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +344,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;getLastLetter returns last character&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;getSecondLastLetter - возвращает правильную букву для fallback&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -331,8 +352,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="abc8998b57729c962cf7792ac35aff8d1" name="abc8998b57729c962cf7792ac35aff8d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc8998b57729c962cf7792ac35aff8d1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[12/16]</span></h2>
+<a id="aedcf5c85f3bfa1cf59cc8c6b162ebd30" name="aedcf5c85f3bfa1cf59cc8c6b162ebd30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedcf5c85f3bfa1cf59cc8c6b162ebd30">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[13/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +361,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;getSecondLastLetter returns correct letter for fallback&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;getSecondLastLetter - возвращение предпоследнего символа&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -348,8 +369,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a0bd3c2b16e287c143a624007b087661e" name="a0bd3c2b16e287c143a624007b087661e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bd3c2b16e287c143a624007b087661e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[13/16]</span></h2>
+<a id="a0f20ad5baad5fbbb84e6649c8530bf4f" name="a0f20ad5baad5fbbb84e6649c8530bf4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f20ad5baad5fbbb84e6649c8530bf4f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[14/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +378,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;getSecondLastLetter returns second last character&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;HumanPlayer - выбрасывает исключение при некорректном слове&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -365,8 +386,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="a9af850f2f5ae7bccb602eb564c42f96c" name="a9af850f2f5ae7bccb602eb564c42f96c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9af850f2f5ae7bccb602eb564c42f96c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[14/16]</span></h2>
+<a id="a86759c8e842e57431e9b8390cd65da4f" name="a86759c8e842e57431e9b8390cd65da4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86759c8e842e57431e9b8390cd65da4f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[15/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,7 +395,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;HumanPlayer throws exception on invalid word&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;isValidWord - принимает только корректный ввод и отклоняет некорректный&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -382,8 +403,8 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
 
 </div>
 </div>
-<a id="afade56481922d04edd2334858847737b" name="afade56481922d04edd2334858847737b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afade56481922d04edd2334858847737b">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[15/16]</span></h2>
+<a id="a20c50314ff935e8c91f56df8fb18683d" name="a20c50314ff935e8c91f56df8fb18683d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c50314ff935e8c91f56df8fb18683d">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[16/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,24 +412,7 @@ $(function(){initNavTree('test__game_8cpp.html','',''); });
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;isValidWord rejects invalid and accepts valid input&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac470745e2fa6beeb9a9da4ae420c769c" name="ac470745e2fa6beeb9a9da4ae420c769c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac470745e2fa6beeb9a9da4ae420c769c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[16/16]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TEST_CASE </td>
-          <td>(</td>
-          <td class="paramtype">&quot;toLower converts to lowercase&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;toLower - перевод в нижний регистр&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

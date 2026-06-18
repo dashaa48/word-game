@@ -78,4 +78,4 @@ class ComputerPlayer : public Player {
     std::string name_;
 };
 
-#endif 
+#endif

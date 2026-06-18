@@ -1,41 +1,41 @@
 /**
  * @file test_game.cpp
- * @brief Tests for the game (doctest)
+ * @brief Тесты игры
  */
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
+
+#include <filesystem>
+#include <fstream>
+#include <sstream>
 
 #include "dictionary.h"
 #include "game.h"
 #include "player.h"
 #include "utils.h"
 
-#include <filesystem>
-#include <fstream>
-#include <sstream>
-
 // ===== Utils tests =====
 
-TEST_CASE("toLower converts to lowercase") {
+TEST_CASE("toLower - перевод в нижний регистр") {
     CHECK(toLower("HELLO") == "hello");
     CHECK(toLower("World") == "world");
     CHECK(toLower("abc") == "abc");
 }
 
-TEST_CASE("getLastLetter returns last character") {
+TEST_CASE("getLastLetter - возвращение последнего символа") {
     CHECK(getLastLetter("hello") == 'o');
     CHECK(getLastLetter("abc") == 'c');
 }
 
-TEST_CASE("getSecondLastLetter returns second last character") {
+TEST_CASE("getSecondLastLetter - возвращение предпоследнего символа") {
     CHECK(getSecondLastLetter("hello") == 'l');
     CHECK(getSecondLastLetter("ab") == 'a');
 }
 
 // ===== Dictionary tests =====
 
-TEST_CASE("Dictionary loads words from files") {
+TEST_CASE("Dictionary - загрузка слов из файлов") {
     std::filesystem::create_directories("test_dict");
     std::ofstream("test_dict/a.txt") << "apple\napricot\n";
     std::ofstream("test_dict/b.txt") << "banana\nberry\n";
@@ -49,7 +49,7 @@ TEST_CASE("Dictionary loads words from files") {
     std::filesystem::remove_all("test_dict");
 }
 
-TEST_CASE("Dictionary returns random word") {
+TEST_CASE("Dictionary - возвращение случайного слова") {
     std::filesystem::create_directories("test_dict2");
     std::ofstream("test_dict2/a.txt") << "apple\napricot\n";
 
@@ -61,7 +61,7 @@ TEST_CASE("Dictionary returns random word") {
     std::filesystem::remove_all("test_dict2");
 }
 
-TEST_CASE("Dictionary checks available words") {
+TEST_CASE("Dictionary - проверка доступных слов") {
     std::filesystem::create_directories("test_dict3");
     std::ofstream("test_dict3/a.txt") << "apple\n";
 
@@ -77,7 +77,7 @@ TEST_CASE("Dictionary checks available words") {
 
 // ===== Player tests =====
 
-TEST_CASE("ComputerPlayer returns word from dictionary") {
+TEST_CASE("ComputerPlayer - возвращение слова из словаря") {
     std::filesystem::create_directories("test_dict4");
     std::ofstream("test_dict4/a.txt") << "apple\n";
 
@@ -93,7 +93,7 @@ TEST_CASE("ComputerPlayer returns word from dictionary") {
 
 // ===== Game tests =====
 
-TEST_CASE("Game starts with initial letter 'a'") {
+TEST_CASE("Game - первоначальная буква 'a'") {
     std::filesystem::create_directories("test_dict5");
     std::ofstream("test_dict5/a.txt") << "apple\n";
 
@@ -102,7 +102,7 @@ TEST_CASE("Game starts with initial letter 'a'") {
 
     std::filesystem::remove_all("test_dict5");
 }
-TEST_CASE("Dictionary does not contain unknown words") {
+TEST_CASE("Dictionary - содержит определенные слова") {
     std::filesystem::create_directories("test_dict6");
     std::ofstream("test_dict6/a.txt") << "apple\n";
 
@@ -113,7 +113,7 @@ TEST_CASE("Dictionary does not contain unknown words") {
     std::filesystem::remove_all("test_dict6");
 }
 
-TEST_CASE("Game handles empty dictionary gracefully") {
+TEST_CASE("Game - корректно обрабатывает пустой словарь") {
     std::filesystem::create_directories("test_dict7");
 
     Game game(GameMode::HUMAN_VS_PC, "test_dict7");
@@ -123,60 +123,60 @@ TEST_CASE("Game handles empty dictionary gracefully") {
 }
 // ===== Negative scenarios =====
 
-TEST_CASE("isValidWord rejects invalid and accepts valid input") {
-    CHECK(isValidWord("hello"));             // letters
-    CHECK(isValidWord("Apple"));             // register
-    CHECK_FALSE(isValidWord(""));            // empty line
-    CHECK_FALSE(isValidWord("hello123"));    // numbers
-    CHECK_FALSE(isValidWord("hello world")); // blank
-    CHECK_FALSE(isValidWord("abc!"));        // special characters
+TEST_CASE("isValidWord - принимает только корректный ввод и отклоняет некорректный") {
+    CHECK(isValidWord("hello"));              // буквы
+    CHECK(isValidWord("Apple"));              // регистр
+    CHECK_FALSE(isValidWord(""));             // пустая строка
+    CHECK_FALSE(isValidWord("hello123"));     // цифры
+    CHECK_FALSE(isValidWord("hello world"));  // пробел
+    CHECK_FALSE(isValidWord("abc!"));         // спецсимволы
 }
 
-TEST_CASE("Dictionary handles missing letter files gracefully") {
+TEST_CASE("Dictionary - корректно обрабатывает отсутствие файлов для букв") {
     std::filesystem::create_directories("test_dict_missing");
     std::ofstream("test_dict_missing/a.txt") << "apple\n";
 
     Dictionary dict("test_dict_missing");
 
-    CHECK_FALSE(dict.contains("banana")); 
-    CHECK(dict.getRandomWord('z') == ""); 
+    CHECK_FALSE(dict.contains("banana"));
+    CHECK(dict.getRandomWord('z') == "");
     CHECK_FALSE(dict.hasAvailableWords('z', {}));
 
     std::filesystem::remove_all("test_dict_missing");
 }
 
-TEST_CASE("ComputerPlayer surrenders when all words used") {
+TEST_CASE("ComputerPlayer - действия, когда все слова использованы") {
     std::filesystem::create_directories("test_dict_surrender");
     std::ofstream("test_dict_surrender/a.txt") << "apple\n";
 
     Dictionary dict("test_dict_surrender");
     ComputerPlayer pc;
     std::unordered_set<std::string> used;
-    used.insert("apple"); 
+    used.insert("apple");
 
     std::string word = pc.makeMove('a', dict, used);
-    CHECK(word == ""); // for rent
+    CHECK(word == "");
 
     std::filesystem::remove_all("test_dict_surrender");
 }
 
-TEST_CASE("getSecondLastLetter returns correct letter for fallback") {
-    CHECK(getSecondLastLetter("apple") == 'l');  // a-p-p-l-e → 'l'
-    CHECK(getSecondLastLetter("banana") == 'n'); // b-a-n-a-n-a → 'n' 
-    CHECK(getSecondLastLetter("hi") == 'h');     // h-i → 'h'
-    CHECK(getSecondLastLetter("a") == 'a');      // 1 letter → the same letter
-    CHECK(getSecondLastLetter("") == '\0');      // '\0'
+TEST_CASE("getSecondLastLetter - возвращает правильную букву для fallback") {
+    CHECK(getSecondLastLetter("apple") == 'l');   // a-p-p-l-e → 'l'
+    CHECK(getSecondLastLetter("banana") == 'n');  // b-a-n-a-n-a → 'n'
+    CHECK(getSecondLastLetter("hi") == 'h');      // h-i → 'h'
+    CHECK(getSecondLastLetter("a") == 'a');       // 1 буква - та же буква
+    CHECK(getSecondLastLetter("") == '\0');       // '\0'
 }
 
-TEST_CASE("Game starts with letter 'a' even with empty dictionary") {
+TEST_CASE("Game - первоначальная буква 'a' даже при пустом словаре") {
     std::filesystem::create_directories("test_dict_empty");
 
     Game game(GameMode::HUMAN_VS_PC, "test_dict_empty");
-    CHECK(game.getCurrentLetter() == 'a'); 
+    CHECK(game.getCurrentLetter() == 'a');
 
     std::filesystem::remove_all("test_dict_empty");
 }
-TEST_CASE("HumanPlayer throws exception on invalid word") {
+TEST_CASE("HumanPlayer - выбрасывает исключение при некорректном слове") {
     std::filesystem::create_directories("test_dict_ex");
 
     std::ofstream("test_dict_ex/a.txt") << "apple\n";
@@ -190,10 +190,7 @@ TEST_CASE("HumanPlayer throws exception on invalid word") {
     std::istringstream input("123abc\n");
     std::cin.rdbuf(input.rdbuf());
 
-    CHECK_THROWS_AS(
-        player.makeMove('a', dict, used),
-        std::invalid_argument
-    );
+    CHECK_THROWS_AS(player.makeMove('a', dict, used), std::invalid_argument);
 
     std::filesystem::remove_all("test_dict_ex");
 }

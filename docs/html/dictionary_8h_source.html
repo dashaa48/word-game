@@ -119,14 +119,14 @@ $(function(){initNavTree('dictionary_8h_source.html','',''); });
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::string path_;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::unordered_set&lt;std::string&gt; allWords_;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::vector&lt;std::string&gt; wordsByLetter_[ALPHABET_SIZE];  </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::vector&lt;std::string&gt; wordsByLetter_[ALPHABET_SIZE];</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> letterToIndex(<span class="keywordtype">char</span> c);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> loadLetterFile(<span class="keywordtype">char</span> letter);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
 </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif  </span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_dictionary_html_a06df97ad2e015916ddd85711782d1758"><div class="ttname"><a href="class_dictionary.html#a06df97ad2e015916ddd85711782d1758">Dictionary::getRandomUnusedWord</a></div><div class="ttdeci">std::string getRandomUnusedWord(char letter, const std::unordered_set&lt; std::string &gt; &amp;usedWords) const</div><div class="ttdoc">Получаем случайное неиспользованное слово, начинающееся с заданной буквы</div><div class="ttdef"><b>Определения</b> dictionary.cpp:49</div></div>
 <div class="ttc" id="aclass_dictionary_html_a2386b4c1fa3c22821713d596fa5a4385"><div class="ttname"><a href="class_dictionary.html#a2386b4c1fa3c22821713d596fa5a4385">Dictionary::hasAvailableWords</a></div><div class="ttdeci">bool hasAvailableWords(char letter, const std::unordered_set&lt; std::string &gt; &amp;usedWords) const</div><div class="ttdoc">Проверяет наличие неиспользованных слов для заданной буквы</div><div class="ttdef"><b>Определения</b> dictionary.cpp:76</div></div>
 <div class="ttc" id="aclass_dictionary_html_a316211c7f4bc6e302c73ec3668384829"><div class="ttname"><a href="class_dictionary.html#a316211c7f4bc6e302c73ec3668384829">Dictionary::getRandomWord</a></div><div class="ttdeci">std::string getRandomWord(char letter) const</div><div class="ttdoc">Получение случайного слово, начинающееся с заданной буквы</div><div class="ttdef"><b>Определения</b> dictionary.cpp:37</div></div>

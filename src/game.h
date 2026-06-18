@@ -67,4 +67,4 @@ class Game {
     bool hasAvailableMoves() const;
 };
 
-#endif 
+#endif
